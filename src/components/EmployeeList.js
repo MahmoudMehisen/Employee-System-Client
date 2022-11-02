@@ -25,11 +25,11 @@ function EmployeeList() {
 
   const deleteEmployee = (e, id) => {
     e.preventDefault();
-    EmployeeService.deleteEmployee(id).then((res)=>{
-      if(employees){
-        setemployees((prevElement) =>{
+    EmployeeService.deleteEmployee(id).then((res) => {
+      if (employees) {
+        setemployees((prevElement) => {
           return prevElement.filter((employee) => employee.id !== id);
-        })
+        });
       }
     });
   };
